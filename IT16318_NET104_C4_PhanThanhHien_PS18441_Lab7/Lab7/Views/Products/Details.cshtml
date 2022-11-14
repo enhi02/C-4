@@ -1,0 +1,50 @@
+﻿@model Lab7.Models.Products
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container p-0">
+    <div class="form-group">
+        <div class="float-left">
+            <img src="/Images/@Model.Img" style="width:350px;height:350px">
+        </div>
+        <div class="" style="background-color:red;">
+        </div>
+    </div>
+</div>
+
+
+<div class="offset-5" style="padding-bottom:12%;">
+    <h3>@Html.DisplayFor(model => model.ProductName)</h3>
+    <hr />
+    <div class="font-weight-bolder" style="font-size:30px">
+        $@Html.DisplayFor(model => model.UnitPrice)
+    </div>
+    <div class="btn btn-outline-primary mt-4" onclick="alert('Bạn đã thêm sản phẩm vào kho')">
+        <a>Add to cart</a>
+    </div>
+    <div class=" clearfix btn btn-success mt-4" onclick="alert('Bạn đã mua sản phẩm, giờ hay quay lại kho sản phẩm nhé')">
+        
+        <a href="/products/index" class="text-white">Buy now</a>
+    </div>
+</div>
+<hr />
+<div class="container row p-0 m-0">
+    <div class="col-12 border mt-3">
+        @foreach (Products item in ListProductSameCast.list)
+        {
+            <div class="float-left ml-sm-5 mb-5">
+                <div>
+                    <a asp-route-id="@item.ProductId" asp-route-idcat="@item.IdCat" asp-controller="Products" asp-action="Details" class="img-fluid mt-4"><img src="/Images/@item.Img" style="width: 200px ; height:200px; " /></a>
+                </div>
+                <div>
+                    <p class="text-uppercase" style="font-weight:600;text-align:center">@item.ProductName</p>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>

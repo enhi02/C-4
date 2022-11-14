@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model Lab6.Models.ListMajor
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div class="container row p-0 m-0" >
+            <h2 class=""style="color:orange">CÁC NGÀNH ĐÀO TẠO</h2>
+            <br />
+            <div class="col-12 border mt-3">
+                @foreach (Majors item in @Model._list)
+                {
+                <div class="float-left ml-sm-3">
+                    <div>
+                        <p class="img-fluid mt-4"><img src="@item.img" /></p>
+                    </div>
+                    <div>
+                        <p class="text-uppercase">@item.name</p>
+                    </div>
+                </div>
+                }
+
+            </div>
+        </div>
+    </body>
+    </html>

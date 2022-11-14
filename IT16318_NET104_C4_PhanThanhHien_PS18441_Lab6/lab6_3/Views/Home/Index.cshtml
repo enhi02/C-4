@@ -1,0 +1,54 @@
+﻿@using lab6_3.Models
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container row p-0 m-0">
+    <div class="col-9">
+        <h2>Danh sách sản phẩm</h2>
+    </div>
+    <div class="col-3">
+        <a asp-controller="Home" asp-action="Create" class="btn btn-dark form-control text-white">Thêm mới</a>
+    </div>
+    <div class="col-12 border p-3 mt-3">
+        @if (ListProduct.list != null)
+        {
+            @if (ListProduct.list.Count() > 0)
+            {
+                <table class="table table-striped border">
+                    <tr class="table-secondary">
+                        <th>
+                            <label asp-for="@ListProduct.list.FirstOrDefault().ProductName"></label>
+                        </th>
+                        <th>
+                            <label asp-for="@ListProduct.list.FirstOrDefault().Price"></label>
+                        </th>
+                        <th>
+                            <label asp-for="@ListProduct.list.FirstOrDefault().Quantity"></label>
+                        </th>
+                    </tr>
+                    @foreach (var item in ListProduct.list)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(m => item.ProductName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(m => item.Price)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(m => item.Quantity)
+                            </td>
+                        </tr>
+                    }
+                </table>
+            }
+
+        }
+        else
+        {
+            <p>No products available</p>
+        }
+
+    </div>
+</div>

@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Lab7.Models.Categories>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<div class="container row p-0 m-0">
+    <div class="col-12 border mt-3">
+        @foreach (Categories item in Model)
+        {
+        <div class="float-left ml-sm-5 mb-5">
+            <div>
+                <a asp-controller="Products" asp-action="Index" asp-route-id="@item.IdCat" class="img-fluid mt-4"><img src="/Images/@item.imagesCat" style="width: 200px ; height:200px; " /></a>
+            </div>
+            <div>
+                <p class="text-uppercase" style="font-weight:600;text-align:center">@item.NameCat</p>
+            </div>
+        </div>
+        }
+
+    </div>
+</div>

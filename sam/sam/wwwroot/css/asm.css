@@ -1,0 +1,105 @@
+﻿body {
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#page {
+    margin: 10px auto;
+    max-width: 1300px;
+    width: 100%;
+}
+
+.top-right {
+    padding: 10px 10px 40px 10px;
+    text-align: center;
+    top: 1px;
+    right: 1px;
+    background-color: rgba(red, green, blue, alpha);
+    line-height: 30px;
+}
+
+    .top-right > a {
+        text-decoration: none;
+        color: black;
+    }
+
+
+.hmenu ul {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    border-radius: 2px;
+    background-color: white;
+    text-align: center;
+    border-bottom: 2px solid white;
+    background-color: rgb(238, 236, 236);
+}
+
+    .hmenu ul li a {
+        text-decoration: none;
+        font-variant: small-caps;
+        font-size: large;
+        color: black;
+        padding: 0 5px;
+        line-height: 40px;
+        padding: 5px 5px 5px 5px;
+        display: block;
+    }
+
+        .hmenu ul li a:hover {
+            color: rgba(199, 15, 15, 0.829);
+        }
+
+.hmenu > ul > li {
+    display: inline-block;
+    width: 10%;
+}
+
+.hmenu ul ul {
+    display: none;
+}
+
+.hmenu ul > li:hover > ul {
+    display: block;
+    position: absolute;
+}
+
+form {
+    width: 250px;
+    min-width: 150px;
+    padding: 15px;
+    margin: 0 auto;
+    transition: 0.6s ease-in-out;
+    line-height: 30px;
+}
+
+input[type="text"]:focus {
+    width: 180px;
+    background-color: lightpink;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(187, 54, 54);
+    color: white;
+}
+
+.dangnhap {
+    text-align: left;
+}
+
+.kk {
+    text-align: left;
+}
+
+.tim {
+    width: 250px;
+    height: 2px;
+    text-align: left;
+    min-width: 150px;
+    padding: 15px;
+    margin: 0 auto;
+    transition: 0.6s ease-in-out;
+    line-height: 30px;
+}

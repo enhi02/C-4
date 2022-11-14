@@ -1,0 +1,97 @@
+﻿
+@model bai2.Models.TestCustomer
+
+<html>
+@*  *@
+<head>
+    <title> Hãng Điện Thoại Đời Cũ </title>
+
+</head>
+<body>
+    <h1 style="color: black; text-align: center"> Hãng Điện Thoại Đời Cũ</h1>
+    <hr />
+    <div class="row">
+        <div class="col-3">
+            <div class="IponeXM64gb">
+                <img style="width: 100%; height: 200px" src="@Model._customerList[0].Images" />
+                <p> @Model._customerList[0].Ten</p>
+                <b> @Model._customerList[0].GiaGop</b>
+                <p style="color: grey"><strike> @Model._customerList[0].Gia</strike></p>
+
+                <img style="width: 100%; height: 30px" src="@Model._customerList[0].DanhGia" />
+                <div class="CauHinh">
+                    <b>Màn Hình:</b> @Model._customerList[0].ManHinh  <br />
+                    <b>Camera: </b>  @Model._customerList[0].Camera   <br />
+                    <b>Pin: </b>     @Model._customerList[0].Pin      <br />
+                    <b>CPU:  </b>    @Model._customerList[0].CPU      <br />
+                    <b>HĐH:  </b>    @Model._customerList[0].HeDH
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="IptwoXM256gb">
+                <img style="width: 100%; height: 200px" src="@Model._customerList[1].Images" />
+                <p> @Model._customerList[1].Ten</p>
+                <b> @Model._customerList[1].GiaGop</b>
+                <p style="color: grey"><strike> @Model._customerList[1].Gia</strike></p>
+
+                <img style="width: 100%; height: 30px" src="@Model._customerList[1].DanhGia" />
+                <div class="CauHinh">
+                    <b>Màn Hình:</b> @Model._customerList[1].ManHinh  <br />
+                    <b>Camera:</b>   @Model._customerList[1].Camera   <br />
+                    <b>Pin: </b>     @Model._customerList[1].Pin      <br />
+                    <b>CPU:   </b>   @Model._customerList[1].CPU      <br />
+                    <b>HĐH:  </b>    @Model._customerList[1].HeDH
+                </div>
+
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="Iptree128gb">
+                <img style="width: 100%; height: 200px" src="@Model._customerList[2].Images" />
+                <p> @Model._customerList[2].Ten</p>
+                <b> @Model._customerList[2].GiaGop</b>
+                <p style="color: grey"><strike> @Model._customerList[2].Gia</strike></p>
+                <img style="width: 100%; height: 30px" src="@Model._customerList[2].DanhGia" />
+
+                <div class="CauHinh">
+                    <b>Màn Hình: </b>@Model._customerList[2].ManHinh <br />
+                    <b>Camera:   </b>@Model._customerList[2].Camera  <br />
+                    <b>Pin:      </b>@Model._customerList[2].Pin     <br />
+                    <b>CPU:      </b>@Model._customerList[2].CPU     <br />
+                    <b>HĐH:      </b>@Model._customerList[2].HeDH
+                </div>
+
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="IpfourXM128gb">
+                <img style="width: 100%; height: 200px" src="@Model._customerList[3].Images" />
+                <p> @Model._customerList[3].Ten</p>
+                <b> @Model._customerList[3].GiaGop</b>
+                <p style="color: grey"><strike> @Model._customerList[3].Gia</strike></p>
+                <img style="width: 100%; height: 30px" src="@Model._customerList[3].DanhGia" />
+
+                <div class="CauHinh">
+                    <b>Màn Hình: </b>@Model._customerList[3].ManHinh <br />
+                    <b>Camera:   </b>@Model._customerList[3].Camera  <br />
+                    <b>Pin:      </b>@Model._customerList[3].Pin     <br />
+                    <b>CPU:      </b>@Model._customerList[3].CPU     <br />
+                    <b>HĐH:     </b> @Model._customerList[3].HeDH
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="DienThoai">
+       
+
+  
+
+    
+
+       
+    </div>
+</body>
+</html>

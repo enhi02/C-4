@@ -1,0 +1,65 @@
+﻿
+@model bai1.Models.TestCustomer
+<!--<html>
+    <head>
+        <title> Customer Details</title>
+        <style>
+            img {
+                width :20%;
+                margin-left :30px
+            }
+            td{
+                padding : 45px;
+            }
+        </style>
+    </head>
+    <body>-->
+        @*<br />
+        <img src="@Model.Test[0].img"/>*@
+        <!--<table>
+            <tr>
+                <td>@Model.Test[0].Name</td>
+
+                <td id="b">@Model.Test[1].Name</td>
+                <td class="c">@Model.Test[2].Name</td>
+
+                <td class="d">@Model.Test[3].Name</td>
+
+            </tr>
+            <tr>
+                <br />
+                <img src="@Model.Test[0].img" />
+                <img src="@Model.Test[1].img" />
+                <img src="@Model.Test[2].img" />
+                <img src="@Model.Test[3].img" />
+            </tr>-->
+
+            @*<tr>
+            <td> CustomerID :</td>
+            <td> @Model._customerList[0].CustomerID</td>
+        </tr>
+        <tr>
+            <td>  Name :</td>
+            <td> @Model._customerList[0].Name </td>
+        </tr>
+        <tr>
+            <td>  Address : </td>
+            <td> @Model._customerList[0].Address </td>
+        </tr>*@
+        <!--</table>
+    </body>
+</html>-->
+
+<h1>CÁC NGÀNH ĐÀO TẠO</h1>
+    @foreach (var i in @Model.Test)
+    {
+    <table style="float:left;">
+        <tr>
+            <td><img src="@i.img " style="width: 250px; height: 250px;" />
+            <td>
+        </tr>
+        <tr>
+            <td>@i.Name</td>
+        </tr>
+    </table>
+    }

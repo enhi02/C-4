@@ -1,0 +1,77 @@
+﻿@*@page
+@model List<WebApplication1.Models.Product>
+@{
+    Layout = "_Layout";
+    }
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>*@
+
+
+@model List<WebApplication1.Models.Product>
+@{
+    Layout = "_Layout";
+}
+
+<br />
+<div class="container row p-0 m-0">
+    <div class="col-9">
+        <h2 class="text-info">Product List</h2>
+    </div>
+    <div class="col-3">
+        <a href="/Products/Index" class="btn btn-info form-control text-white">Create new product</a>
+    </div>
+
+    <div class="col-12 border p-3 mt-3">
+        <form method="post">
+            @if (Model.Count() > 0)
+            {
+                <table class="table table-striped border">
+                    <tr class="table-secondary">
+                        <th>
+                            <label>Name: </label>
+                        </th>
+                        <th>
+                            <label>Price: </label>
+                        </th>
+                        <th>
+                            <label>Quantity: </label>
+                        </th>
+                        <th>
+                            <label>Status: </label>
+                        </th>
+                        <th>
+
+                        </th>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @item.Name
+                            </td>
+                            <td>
+                                @item.Price
+                            </td>
+                            <td>
+                                @item.Quantity
+                            </td>
+                            <td>
+                                @item.Status
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                    }
+                   
+                </table>
+            }
+            else
+            {
+                <p>No books available</p>
+            }
+        </form>
+    </div>
+</div>
